@@ -1,0 +1,146 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body dan dasar layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh; /* Penuh tinggi layar */
+    display: flex;
+    flex-direction: column; /* Mengatur layout vertikal */
+}
+
+/* Wrapper layout utama */
+.wrapper {
+    display: flex;
+    flex: 1; /* Isi ruang yang tersedia */
+    width: 100%; 
+}
+
+/* Sidebar di kiri */
+.sidebar {
+    width: 200px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Penuh tinggi layar */
+    position: fixed; /* Tetap di kiri saat scroll */
+    left: 0;
+    top: 0;
+}
+
+/* Gaya judul sidebar */
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #0056b3;
+}
+
+/* Konten utama */
+.main-content {
+    flex: 1;
+    margin-left: 200px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Hero Section */
+.hero {
+    width: calc(100% - 200px); /* Sesuaikan dengan sidebar */
+    margin-left: 200px; /* Pastikan sejajar dengan konten */
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Daftar Produk */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Item Produk */
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-item p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.product-item a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.product-item a:hover {
+    background-color: #218838;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    width: 100%; 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
